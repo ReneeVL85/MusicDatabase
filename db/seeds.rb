@@ -21,6 +21,10 @@ In 2013, his second album Racine Carrée was a commercial success, selling 2 mil
 
 ]
 
+artists.each do | name, country, bio, image |
+   Artist.create( name: name, country: country, bio: bio, image:image )
+end
+
 artist_songs = {}
 artist_songs["Lily Allen"] = [
 
@@ -50,7 +54,7 @@ artist_songs["Creedence Clearwater Revival"] = [
      In 2011, Rolling Stone ranked it 364 on its 500 Greatest Songs of All Time list."
    ],
 
-   [ "Whod Have Known",
+   [ "Fortunate Son",
      1969, "The song is a counterculture era anti-war anthem, criticizing militant patriotic behavior and those who support the use of military force without having to pay the costs themselves
      either financially or by serving in a wartime military."
    ]
@@ -77,9 +81,6 @@ artist_songs["Stromae"] = [
    ]
 ]
 
-artists.each do | name, country, bio, image |
-   Artist.create( name: name, country: country, bio: bio, image:image )
-end
 
 artist_songs.each do | artist_name, songs|
   artist = Artist.find_by( name: artist_name)
