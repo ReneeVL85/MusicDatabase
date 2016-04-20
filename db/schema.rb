@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160419175613) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.string   "country"
@@ -31,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160419175613) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
+  add_index "songs", ["artist_id"], name: "index_songs_on_artist_id", using: :btree
 
+  add_foreign_key "songs", "artists"
 end
