@@ -1,2 +1,8 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<h1>
+   <%= @song.title %>
+</h1>
+
+<h3><%= link_to @song.artist.name, @song.artist %> </h3>
+
+<p><%= @song.year %></p>
+<p><%= @song.synopsis %></p>

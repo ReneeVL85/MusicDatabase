@@ -42,7 +42,7 @@ artist_songs["Lily Allen"] = [
    ]
 ]
 
-artist_songs = {}
+
 artist_songs["Creedence Clearwater Revival"] = [
 
    [ "Bad Moon Rising",
@@ -60,7 +60,7 @@ artist_songs["Creedence Clearwater Revival"] = [
    ]
 ]
 
-artist_songs = {}
+
 artist_songs["Stromae"] = [
 
    [ "Alors on danse",
