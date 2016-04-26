@@ -5,3 +5,10 @@
 <h3><%= @artist.country %></h3>
 
 <p><%= simple_format @artist.bio %></p>
+
+<h2>Songs</h2>
+
+<% songs = @artist.songs.sort_by { |song| song.year } %>
+
+
+<%= render songs, hide_artist: true %>

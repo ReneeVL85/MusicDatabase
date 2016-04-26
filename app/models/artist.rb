@@ -1,4 +1,4 @@
 class Artist < ActiveRecord::Base
   mount_uploader :image, ImageUploader
-  has_many :song
+  has_many :songs
 end
